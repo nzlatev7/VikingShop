@@ -14,7 +14,7 @@ namespace VikingShop
         public DbSet<Product> Products { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=ZLATI\SQLEXPRESS01;Initial Catalog=VikingShop;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=VikingShop;Trusted_Connection=True;");
         }
     }
 }
