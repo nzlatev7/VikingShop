@@ -52,6 +52,8 @@ namespace VikingShop.Controllers
                 
             });
 
+
+
             dbContext.SaveChanges();
             return new Response(true, "");
 
