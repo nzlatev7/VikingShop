@@ -10,8 +10,8 @@ using VikingShop;
 namespace VikingShop.Migrations
 {
     [DbContext(typeof(VikingShopDbContext))]
-    [Migration("20220607153745_Initial")]
-    partial class Initial
+    [Migration("20220703133618_InitialDBCreation")]
+    partial class InitialDBCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

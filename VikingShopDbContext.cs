@@ -10,11 +10,14 @@ namespace VikingShop
 {
     public class VikingShopDbContext : DbContext
     {
+        public VikingShopDbContext(DbContextOptions<VikingShopDbContext> options) : base(options)
+        {
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=VikingShop;Trusted_Connection=True;");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=VikingShop;Trusted_Connection=True;");
+        //}
     }
 }
