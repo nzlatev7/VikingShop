@@ -26,7 +26,7 @@ namespace VikingShop.Controllers
         [HttpPost]
         public Response Register(RegisterRequest request) 
         {
-            if(request.UserName.Length > 40 || request.UserName.Length < 3)
+            if(request.UserName.Length > 30 || request.UserName.Length < 3)
             {
                 return new Response(false, "UserNameLength");
             }
@@ -35,7 +35,7 @@ namespace VikingShop.Controllers
                 return new Response(false, "UserNameDublicate");
             }
 
-            if (request.Password.Length < 8 || request.Password.Length > 40)
+            if (request.Password.Length < 6 || request.Password.Length > 30)
             {
                 return new Response(false, "PasswordLength");
             }
