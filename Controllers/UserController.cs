@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VikingShop.Models.Request;
+using VikingShop.Models.Response;
 
 namespace VikingShop.Controllers
 {
@@ -56,7 +57,19 @@ namespace VikingShop.Controllers
 
             dbContext.SaveChanges();
             return new Response(true, "");
+        }
 
+        [HttpGet]
+        public List<UserGetAllResponse> GetAll()
+        {
+            return dbContext.Users
+                .Select(x => new UserGetAllResponse()
+                {
+                    Id = x.Id,
+                    UserName = x.UserName,
+                    Email = x.Email,
+                    IsEmailConfirmed = x.IsEmailConfirmed
+                }).ToList();
         }
     }
 }
