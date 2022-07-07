@@ -71,5 +71,11 @@ namespace VikingShop.Controllers
                     IsEmailConfirmed = x.IsEmailConfirmed
                 }).ToList();
         }
+
+        [HttpGet]
+        public void Delete(DeleteRequest request)
+        { 
+            
+        }
     }
 }
