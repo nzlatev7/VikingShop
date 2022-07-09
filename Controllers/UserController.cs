@@ -72,10 +72,16 @@ namespace VikingShop.Controllers
                 }).ToList();
         }
 
-        [HttpGet]
+        [HttpDelete]
         public void Delete(DeleteRequest request)
-        { 
-            
+        {
+            var userForDelete = dbContext.Users.Where(x => x.Id == request.Id).FirstOrDefault();
+            if (userForDelete == null)
+            {
+                return;
+            }
+            dbContext.Users.Remove(userForDelete);
+            dbContext.SaveChanges();
         }
     }
 }
