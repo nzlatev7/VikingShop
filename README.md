@@ -18,4 +18,4 @@ Front End -
 ---------------------------------------------------
 ### License
 
-Copyright ©2018 – Nikolay Zlatev (nzlatev7), all rights reserved.
+Copyright ©2022 – Nikolay Zlatev (nzlatev7), all rights reserved.
